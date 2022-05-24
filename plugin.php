@@ -59,7 +59,7 @@ load_plugin_textdomain( 'PLUGIN_SLUG', false, plugin_basename( dirname( __FILE__
 /**
  * load
  */
-require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIN_CLASS.php';
+require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIn_SLUG.php';
 /**
  * run
  */
@@ -68,7 +68,7 @@ new iWorks_PLUGIN_CLASS;
  * admin
  */
 if ( is_admin() ) {
-	require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIN_CLASS-administrator.php';
+	require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIN_SLUG.php';
 	new iWorks_PLUGIN_CLASS_Administrator;
 }
 

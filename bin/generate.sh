@@ -33,27 +33,27 @@ echo "class iWorks_PLUGIN_CLASS_Administrator{\n}" > ${INCLUDES}/class-${PLUGIN_
 #
 # https://github.com/iworks/_s_to_wp_theme/archive/refs/heads/master.zip
 #
-PLUGIN_REPO=wp-plugin-boilerplate-main
+PLUGIN_REPO=wp-plugin-boilerplate
 
 wget https://github.com/iworks/${PLUGIN_REPO}/archive/refs/heads/master.zip
 
 unzip -o master.zip
-cp -r ${PLUGIN_REPO}/* ${PLUGIN}
+cp -r ${PLUGIN_REPO}-main/* ${PLUGIN}
 #
 # clean up
 #
 
-mv plugin.php ${PLUGIN_SLUG}.php
+mv ${PLUGIN_SLUG}/plugin.php ${PLUGIN_SLUG}/${PLUGIN_SLUG}.php
 rm -rf master.zip
-rm -rf ${PLUGIN_REPO}
+rm -rf ${PLUGIN_REPO}-main
 rm -rf ${PLUGIN_SLUG}.zip
 rm -rf ${PLUGIN_SLUG}/bin
 
 cd ${PLUGIN}
 
-perl -pi -e 's/PLUGIN_SLUG/${PLUGIN_SLUG}/g' $(grep -rl PLUGIN_SLUG)
-perl -pi -e 's/PLUGIN_NAME/${PLUGIN_NAME}/g' $(grep -rl PLUGIN_NAME)
-perl -pi -e 's/PLUGIN_CLASS/${PLUGIN_CLASS}/g' $(grep -rl PLUGIN_CLASS)
-perl -pi -e 's/PLUGIN_OPTION/${PLUGIN_OPTION}/g' $(grep -rl PLUGIN_OPTION)
+perl -pi -e "s/PLUGIN_SLUG/${PLUGIN_SLUG}/g" $(grep -rl PLUGIN_SLUG)
+perl -pi -e "s/PLUGIN_NAME/${PLUGIN_NAME}/g" $(grep -rl PLUGIN_NAME)
+perl -pi -e "s/PLUGIN_CLASS/${PLUGIN_CLASS}/g" $(grep -rl PLUGIN_CLASS)
+perl -pi -e "s/PLUGIN_OPTION/${PLUGIN_OPTION}/g" $(grep -rl PLUGIN_OPTION)
 
 
