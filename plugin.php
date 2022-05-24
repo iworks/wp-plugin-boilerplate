@@ -59,7 +59,7 @@ load_plugin_textdomain( 'PLUGIN_SLUG', false, plugin_basename( dirname( __FILE__
 /**
  * load
  */
-require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIn_SLUG.php';
+require_once $includes . '/iworks/PLUGIN_SLUG/class-PLUGIN_SLUG.php';
 /**
  * run
  */
