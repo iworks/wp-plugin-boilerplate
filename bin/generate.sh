@@ -27,8 +27,8 @@ mkdir -p ${ASSETS}/scripts/admin
 #
 mkdir -p ${INCLUDES}
 
-echo "class iWorks_PLUGIN_CLASS{\n}" > ${INCLUDES}/class-${PLUGIN_CLASS}.php
-echo "class iWorks_PLUGIN_CLASS_Administrator{\n}" > ${INCLUDES}/class-${PLUGIN_CLASS}-administrator.php
+echo "class iWorks_PLUGIN_CLASS{}" > ${INCLUDES}/class-${PLUGIN_SLUG}.php
+echo "class iWorks_PLUGIN_CLASS_Administrator{}" > ${INCLUDES}/class-${PLUGIN_SLUG}-administrator.php
 
 #
 # https://github.com/iworks/_s_to_wp_theme/archive/refs/heads/master.zip
